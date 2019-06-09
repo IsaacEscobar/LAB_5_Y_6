@@ -21,11 +21,17 @@ public  class Main{
 
   public void showMenu(){
     int userImput = 0;
+    System.out.println("");
+    System.out.println("");
+    System.out.println("");
     System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
     System.out.println("1.Mostrar la informacion");
-    System.out.println("2.Agregar una compahnia");
+    System.out.println("2.Agregar una compania");
     System.out.println("9.Salir");
     System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+    System.out.println("");
+    System.out.println("");
+    System.out.println("");
     while(userImput != 9){
       userImput = reader.nextInt();
       reader.nextLine();
@@ -34,12 +40,12 @@ public  class Main{
       }else if(userImput == 2){
         int userSelection = 0;
         System.out.println("||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
-        System.out.println("Elija el tipo de companhia");
+        System.out.println("Elija el tipo de compania");
         System.out.println("|||||||||||||||||||||DE SERVICIO||||||||||||||||||||||||");
         System.out.println("1.Empresa de Educacion");
         System.out.println("2.Empresa de tecnologia");
         System.out.println("3.Empresa publica");
-        System.out.println("|||||||||||||||||||||DE MANOFACTURA|||||||||||||||||||||");
+        System.out.println("|||||||||||||||||||||DE MANUFACTURA|||||||||||||||||||||");
         System.out.println("4.Empresa de comida");
         System.out.println("5.Empresa de medicamento");
         System.out.println("6.Salir de la creacion");
@@ -431,7 +437,8 @@ public  class Main{
       principal.getPollsWithCompany(nombre1).add(kj);
     }
   }
-  }else if(number == 2){
+  }
+  else if(number == 2){
     for(int h = 0; h < 50;h++){
       System.out.println("Digite el servicio hecho");
       int mk = reader.nextInt();
@@ -445,8 +452,8 @@ public  class Main{
       Poll mkj = new Poll(mk,ml,mj);
       if(principal.getPollsWithCompany(nombre1) != null){
         principal.getPollsWithCompany(nombre1).add(mkj);
+      }
     }
-  }
   }
   }
   }
@@ -455,13 +462,13 @@ public  class Main{
   public void init(){
     principal = new Holding(new Building(13));
     Building newBuilding = new Building(12);
-    Company Technology = new TechnologyCompany("NewSoftware", "123330133", "Soacha", "3104898989", 22, 145, "2019-03-01", Company.SECURE_INMU_COM, "PlayTecho", newBuilding, TechnologyCompany.SOFTWARE_DEVELOP, 1333);
-    principal.addCompany(Technology);
-    Building  = new Building(8);
-    Company Invima = new Invima("Invima", "123330133", "Soacha", "3104898989", 9, 133, "2019-03-01", Company.SECURE_INMU_COM, "PlayTecho", newBuilding, "sadasdasd", Invima.VALID, "2019-02-03", Invima.FABRICATION_SELL);
-    Product zk = new Product("Product", 12, 123123133, 5);
+    Company technology = new TechnologyCompany("NewSoftware", "123330133", "Soacha", "3104898989", 22, 145, "2019-03-01", Company.SECURE_INMU_COM, "PlayTecho", newBuilding, TechnologyCompany.SOFTWARE_DEVELOP, 1333);
+    principal.addCompany(technology);
+    newBuilding = new Building(8);
+    Company invima = new Invima("Invima", "123330133", "Soacha", "3104898989", 9, 133, "2019-03-01", Company.SECURE_INMU_COM, "PlayTecho", newBuilding, "sadasdasd", Invima.VALID, "2019-02-03", Invima.FABRICATION_SELL);
+    Product random = new Product("Product", 12, 123123133, 5);
     ArrayList<Product> product =  new ArrayList<Product>();
-    product.add(zk);
+    product.add(random);
     principal.addCompanyProducts(invima, product);
   }
 }

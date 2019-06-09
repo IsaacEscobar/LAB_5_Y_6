@@ -1,8 +1,8 @@
-// package model;
-//
-// public interface Consumptiom{
-//
-// public int calculatedThingXArbol();
-//
-//
-// }
+package model;
+
+public interface Consumption{
+
+public int calculatedThingXArbol();
+
+
+}
