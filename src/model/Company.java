@@ -1,126 +1,122 @@
 package model;
-import java.util.ArrayList;
 
-public abstract class Company {
+public abstract class Company{
 
-  public final static char AGRICULTURA = 'A';
-  public final static char CAZA = 'B';
-  public final static char SILVICULTURA_Y_PEZCA = 'C';
-  public final static char MINAS_Y_CANTERAS = 'D';
-  public final static char MANUFACTURERA = 'E';
-  public final static char ELECTRICIDAD = 'F';
-  public final static char GAS_Y_VAPOR = 'H';
-  public final static char CONSTRUCCION = 'I';
-  public final static char COMERCIO_POR_MAYOR_Y_POR_MENOR = 'J';
-  public final static char TRANSPORTE = 'K';
-  public final static char ALMACENAMIENTO_Y_COMUNICACIONES = 'L';
-  public final static char FINANCIEROS = 'M';
-  public final static char SEGUROS = 'N';
-  public final static char INMUEBLES = 'O';
-  public final static char SERVICIOS_A_COMPAÑIAS = 'P';
-  public final static char COMUNALES = 'Q';
-  public final static char SOCIALES = 'R';
+  public final static char AGRICUL_HUNT_SILV_FISH = 'A';
+  public static final char EXPLOT_MINES_CAN = 'B';
+  public static final char INDUSTRY_MANU = 'C';
+  public static final char ELECTRICITY_GAS_STEAM = 'D';
+  public static final char CONSTRUCTION = 'E';
+  public static final char COMERCY_MM  = 'F';
+  public static final char TRANSPORTATION_A_C = 'G';
+  public static final char SECURE_INMU_COM = 'H';
+  public static final char SOCI_COM = 'I';
 
-
-  private String name;
+  private  String nameComercy;
   private String nit;
-  private String address;
-  private String phoneNumber;
-  private int employeesNumber;
-  private String assetsValue;
-  private String constitutionDate;
-  private String organizationType;
-  private String repName;
+  private String addres;
+  private String phoneContact;
+  private int employeeCant;
+  private double amountActives;
+  private String dateOfInscription;
+  private char typeOrganization;
+  private String legalName;
+  private Building build;
 
-  private ArrayList<ServiceCompany> serviceCompanies;
-  private ArrayList<ManufactureCompany> manufactureCompanies;
-
-  public Company(String name, String nit, String address, String phoneNumber, int employeesNumber, String assetsValue, String constitutionDate, String organizationType, String repName) {
-    this.name = name;
+  public Company(String nameComercy,String nit, String addres,String phoneContact, int employeeCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,Building build){
+    this.nameComercy = nameComercy;
     this.nit = nit;
-    this.address = address;
-    this.phoneNumber = phoneNumber;
-    this.employeesNumber = employeesNumber;
-    this.assetsValue = assetsValue;
-    this.constitutionDate = constitutionDate;
-    this. organizationType = organizationType;
-    this.repName = repName;
-    ArrayList<ServiceCompany> serviceCompanies = new ArrayList<ServiceCompany>();
-    ArrayList<ManufactureCompany> manufactureCompanies = new ArrayList<manufactureCompanies>();
+    this.addres = addres;
+    this.phoneContact = phoneContact;
+    this.employeeCant = employeeCant;
+    this.amountActives = amountActives;
+    this.dateOfInscription = dateOfInscription;
+    this.typeOrganization = typeOrganization;
+    this.legalName = legalName;
+    this.build = build;
   }
 
-  public String getName() {
-    return name;
+  public Building getBuilding1(){
+    return build;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setBuilding1(Building build){
+    this.build = build;
   }
 
-  public String getNit() {
+  public String getDateOfInscription(){
+    return dateOfInscription;
+  }
+
+  public void setDateOfInscription(String dateOfInscription){
+    this.dateOfInscription = dateOfInscription;
+  }
+
+  public String getNameComercy(){
+    return nameComercy;
+  }
+
+  public void setNameComercy(String nameComercy){
+    this.nameComercy = nameComercy;
+  }
+
+  public String getNit(){
     return nit;
   }
 
-  public void setNit(String nit) {
+  public void setNit(String nit){
     this.nit = nit;
   }
 
-  public String getAddress() {
-    return address;
+  public String getAddres(){
+    return addres;
   }
 
-  public void setAddress(String address) {
-    this.address = address;
+  public void setAddres(String addres){
+    this.addres = addres;
   }
 
-  public String getPhoneNumber() {
-    return phoneNumber;
+  public String getPhoneContact(){
+    return phoneContact;
   }
 
-  public void setPhoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
+  public void setPhoneContact(String phoneContact){
+    this.phoneContact = phoneContact;
   }
 
-  public int getEmployeesNumber() {
-    return employeesNumber;
+  public int getEmployeeCant(){
+    return employeeCant;
   }
 
-  public void setEmployeesNumber(int employeesNumber) {
-    this.employeesNumber = employeesNumber;
+  public void setEmployeeCant(int employeeCant){
+    this.employeeCant = employeeCant;
   }
 
-  public String getAssetsValue() {
-    return assetsValue;
+  public double getAmountActives(){
+    return amountActives;
   }
 
-  public void setAssetsValue(String assetsValue) {
-    this.assetsValue = assetsValue;
+  public void setAmountActives(double amountActives){
+    this.amountActives = amountActives;
   }
 
-  public String getConstitutionDate() {
-    return constitutionDate;
+  public char getTypeOrganization(){
+    return typeOrganization;
   }
 
-  public void setConstitutionDate(String constitutionDate) {
-    this.constitutionDate = constitutionDate;
+  public void setTypeOrganization(char typeOrganization){
+    this.typeOrganization = typeOrganization;
   }
 
-  public String getOrganizationType() {
-    return organizationType;
+  public String getLegalName(){
+    return legalName;
   }
 
-  public void setOrganizationType() {
-    this.organizationType = organizationType;
-  }
-
-  public String getRepName() {
-    return repName;
-  }
-
-  public void setRepName(String repName) {
-    this.repName = repName;
+  public void setLegalName(String legalName){
+    this.legalName = legalName;
   }
 
   public abstract String toString();
+
 
 }
