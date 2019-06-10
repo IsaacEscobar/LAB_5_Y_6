@@ -3,8 +3,6 @@ import java.util.ArrayList;
 
 public class Holding{
 
-  //Relaciones
-
   private ArrayList<Company> companies;
   private Building principalOfThis;
 

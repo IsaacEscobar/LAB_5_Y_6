@@ -51,7 +51,7 @@ public class Building{
 	    if(tower[i][k].getNameEmployee().equals(nameEmpleado)){
 
 	      msj += "El empleado es" + tower[i][k].getExtension();
-	      }
+			}
 	    abajoL = true;
 	  }
 
